@@ -8,4 +8,11 @@ Docker Engine has a core part docker daemon , that handles the creation and mana
 ### Docker Image:
 Docker Image is a read-only template that is used for creating containers, containing the application code and dependencies, while a container is a running instance of that image.
 ### Containers: 
-Standardized, isolated runtime instances created from an image. They are lightweight because they share the host operating system's kernel, unlike virtual machines which run a full guest OS.
+Standardized, isolated runtime instances created from an image. They are lightweight because they share the host operating system's kernel, unlike virtual machines which run a full guest OS. A container is a running instance created from an image.
+
+### When you run:
+
+Docker Engine:
+Takes the image
+Creates a container from it
+Starts the application inside that container
