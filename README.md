@@ -13,6 +13,6 @@ Standardized, isolated runtime instances created from an image. They are lightwe
 ### When you run:
 
 Docker Engine:
-Takes the image
-Creates a container from it
-Starts the application inside that container
+1) Takes the image
+2) Creates a container from it
+3) Starts the application inside that container
