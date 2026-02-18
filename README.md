@@ -6,6 +6,6 @@ Docker is a platform that allows you to package an application along with everyt
 ### Docker Engine:
 Docker Engine has a core part docker daemon , that handles the creation and management of containers.
 ### Docker Image:
-Docker Image is a read-only template that is used for creating containers, containing the application code and dependencies.
+Docker Image is a read-only template that is used for creating containers, containing the application code and dependencies, while a container is a running instance of that image.
 ### Containers: 
 Standardized, isolated runtime instances created from an image. They are lightweight because they share the host operating system's kernel, unlike virtual machines which run a full guest OS.
