@@ -45,7 +45,7 @@ First . → current folder on your system
 Second . → current WORKDIR inside container
 Copy everything from your project folder into /app inside container.
 
-4) run -> Executes while building the image, Used to prepare/setup things, Runs "only once during docker build". here in java we use run to compile it (byte file-> class file). incase of python we use "pip install" . RUN prepares the image.Prepare everything (install, compile, setup)
+4)run -> Executes while building the image, Used to prepare/setup things, Runs "only once during docker build". here in java we use run to compile it (byte file-> class file). incase of python we use "pip install" . RUN prepares the image.Prepare everything (install, compile, setup)
 
-5) cmd -> Executes when the container starts, starts the application,
+5)cmd -> Executes when the container starts, starts the application,
 rule : CMD ["language_or_runtime", "your_file"]
