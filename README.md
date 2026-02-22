@@ -17,3 +17,13 @@ Docker Engine: we write Instructions to build an image, Steps to set up the envi
 1) Takes the image
 2) Creates a container from it
 3) Starts the application inside that container
+
+# practice with java file
+1)create main.java and write some print code
+2)create docker file inside the same folder
+3)inside docker file write the below 
+
+FROM openjdk:17
+WORKDIR /app
+COPY . .
+RUN javac Main.java
