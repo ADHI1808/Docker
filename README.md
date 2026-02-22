@@ -26,11 +26,14 @@ Docker Engine: we write Instructions to build an image, Steps to set up the envi
 
 3)inside docker file write the below 
 
+{
+
 FROM openjdk:17
 WORKDIR /app
 COPY . .
 RUN javac Main.java
 CMD ["java","main"]
+}
 
 ### explanation 
 1)from -> calls the base image from docker hub here we using java so it calls javajdk 17, for python it calls python and for .net it calls .net from docker hub,  
