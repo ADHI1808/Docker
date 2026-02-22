@@ -19,11 +19,28 @@ Docker Engine: we write Instructions to build an image, Steps to set up the envi
 3) Starts the application inside that container
 
 # practice with java file
+
 1)create main.java and write some print code
+
 2)create docker file inside the same folder
+
 3)inside docker file write the below 
 
 FROM openjdk:17
 WORKDIR /app
 COPY . .
 RUN javac Main.java
+CMD ["java","main"]
+
+### explanation 
+from -> calls the base image from docker hub here we using java so it calls javajdk 17, for python it calls python and for .net it calls .net from docker hub,  
+#### FROM specifies the base image on which your Docker image is built.
+
+workdir -> WORKDIR creates the folder if it doesn't exist, otherwise it uses the existing one.
+WORKDIR /app
+WORKDIR project means app/project
+
+copy -> Copies files from your system → into the Docker image.
+First . → current folder on your system
+Second . → current WORKDIR inside container
+#### Copy everything from your project folder into /app inside container.
