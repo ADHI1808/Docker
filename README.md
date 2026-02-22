@@ -33,14 +33,19 @@ RUN javac Main.java
 CMD ["java","main"]
 
 ### explanation 
-from -> calls the base image from docker hub here we using java so it calls javajdk 17, for python it calls python and for .net it calls .net from docker hub,  
-#### FROM specifies the base image on which your Docker image is built.
+1)from -> calls the base image from docker hub here we using java so it calls javajdk 17, for python it calls python and for .net it calls .net from docker hub,  
+FROM specifies the base image on which your Docker image is built.
 
-workdir -> WORKDIR creates the folder if it doesn't exist, otherwise it uses the existing one.
+2)workdir -> WORKDIR creates the folder if it doesn't exist, otherwise it uses the existing one.
 WORKDIR /app
 WORKDIR project means app/project
 
-copy -> Copies files from your system → into the Docker image.
+3)copy -> Copies files from your system → into the Docker image.
 First . → current folder on your system
 Second . → current WORKDIR inside container
-#### Copy everything from your project folder into /app inside container.
+Copy everything from your project folder into /app inside container.
+
+4) run -> Executes while building the image, Used to prepare/setup things, Runs "only once during docker build". here in java we use run to compile it (byte file-> class file). incase of python we use "pip install" . RUN prepares the image.Prepare everything (install, compile, setup)
+
+5) cmd -> Executes when the container starts, starts the application,
+rule : CMD ["language_or_runtime", "your_file"]
